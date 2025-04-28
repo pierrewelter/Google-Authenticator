@@ -1,0 +1,159 @@
+body {
+    background-color: #181414; /* Cor cinza claro */
+  }
+
+.flex{
+    display: flex;
+}
+
+.fotos {
+    display: flex;
+    margin-left: 100px;
+    margin-top: 20px;
+    height: 70px;
+    gap: 20px;
+}
+
+h3{
+    color: white;
+    font-family:sans-serif;
+}
+h1{ 
+color: red;
+font-family: sans-serif;
+}
+
+.menu-hamburguer {
+    cursor: pointer;
+    align-items: center;
+
+    /* Estilos adicionais para o ícone do menu */
+  }
+  
+  .bar {
+    width: 25px;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    margin: 5px 0;
+    gap: 20px;
+    transition: transform 0.4s ease;
+    align-items: center;
+    /* Estilos adicionais para as barras do menu */
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  .menu {
+    /* Estilos para o menu em si, por exemplo, posição, tamanho, etc. */
+    position: absolute;
+    top: 0;
+    gap: 20px;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgb(255, 255, 255);
+    padding-top: 20px;
+    z-index: 1; /* Certifique-se de que o menu apareça acima de outros elementos */
+    transform: translateX(100%); /* Inicialmente escondido */
+    transition: transform 0.4s ease;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu ul li {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Estilização para quando o menu está visível */
+  .menu-toggle:checked ~ .menu {
+    transform: translateX(0%);
+  }
+  
+  /* Animações das barras quando o menu é aberto/fechado */
+  .menu-toggle:checked ~ .menu-hamburguer .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-3px, 4px);
+  }
+  
+  .menu-toggle:checked ~ .menu-hamburguer .bar:nth-child(2) {
+    opacity: 0; /* Esconde a barra central */
+  }
+  
+  .menu-toggle:checked ~ .menu-hamburguer .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-3px, -4px);
+  }
+
+.search-box-input::placeholder {
+    
+    color:#ffffff;
+    opacity: 0.6;
+}
+/* Chrome, Opera ySafari */
+.search-box-input::-webkit-input-placeholder { color: #ffffff; }
+/* Firefox 19+ */
+.search-box-input::-moz-placeholder { color: #ffffff; }
+/* IE 10+ y Edge */
+.search-box-input:-ms-input-placeholder { color: #ffffff; }
+.search-box form {
+    
+    display: flex;
+    border-radius: 50px;
+    background-color: #4c4c4c;
+    height: 45px;
+}
+.search-box:hover .search-box-input {
+    
+    padding-left: 2em;
+    padding-right: 1em;
+    width: 250px;
+}
+.search-box-input {
+    outline: 0;
+    font-size: 1.2em;
+    color: #fff;
+    width: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    transition: .45s;
+}
+.search-box-button {
+   display: flex;
+   border-radius: 50%;
+   width: 45px;
+   height: 45px;
+   background-color: #ffffff;
+   border: none;
+   cursor: pointer;
+   transition: .3s;
+}
+.search-box-button:active  {
+    transform: scale(.85);
+}
+.search-box-icone {
+    margin: auto;
+    color: #fff;
+}
+@media screen and (min-width: 400px){
+    
+    .search-box:hover .search-box-input {
+        width: 360px;
+    }
+}
+
+.baixo{
+background-color: #181414;
+margin-top: 289px;
+}
+
+.flexmais{
+    display: flex;
+    justify-content: right;
+}
