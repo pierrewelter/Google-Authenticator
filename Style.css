@@ -8,24 +8,26 @@ body {
 
 .fotos {
     display: flex;
-    margin-left: 100px;
+    margin-left: 80px;
     margin-top: 20px;
     height: 70px;
     gap: 20px;
+    
 }
 
 h3{
     color: white;
     font-family:sans-serif;
 }
-h1{ 
+h2{ 
 color: red;
-font-family: sans-serif;
+align-items: center;
 }
 
 .menu-hamburguer {
     cursor: pointer;
     align-items: center;
+    margin: 12px;
 
     /* Estilos adicionais para o ícone do menu */
   }
@@ -36,58 +38,24 @@ font-family: sans-serif;
     background-color: rgb(255, 255, 255);
     display: flex;
     margin: 5px 0;
-    gap: 20px;
     transition: transform 0.4s ease;
-    align-items: center;
     /* Estilos adicionais para as barras do menu */
   }
   
   .menu-toggle {
-    display: none;
+    display:block;
+    gap: 20px;
   }
   
   .menu {
     /* Estilos para o menu em si, por exemplo, posição, tamanho, etc. */
     position: absolute;
     top: 0;
-    gap: 20px;
     right: 0;
     height: 100vh;
     width: 250px;
     background-color: rgb(255, 255, 255);
     padding-top: 20px;
-    z-index: 1; /* Certifique-se de que o menu apareça acima de outros elementos */
-    transform: translateX(100%); /* Inicialmente escondido */
-    transition: transform 0.4s ease;
-  }
-  
-  .menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .menu ul li {
-    padding: 15px;
-    border-bottom: 1px solid #eee;
-  }
-  
-  /* Estilização para quando o menu está visível */
-  .menu-toggle:checked ~ .menu {
-    transform: translateX(0%);
-  }
-  
-  /* Animações das barras quando o menu é aberto/fechado */
-  .menu-toggle:checked ~ .menu-hamburguer .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-3px, 4px);
-  }
-  
-  .menu-toggle:checked ~ .menu-hamburguer .bar:nth-child(2) {
-    opacity: 0; /* Esconde a barra central */
-  }
-  
-  .menu-toggle:checked ~ .menu-hamburguer .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-3px, -4px);
   }
 
 .search-box-input::placeholder {
